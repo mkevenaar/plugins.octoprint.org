@@ -1,28 +1,42 @@
 ---
 layout: plugin
 
-id: draggable_files
-title: Draggable Files
-description: Plugin that allows for the dragging of files in the File Manager
+id: LightControls
+title: OctoPrint-LightControls
+description: Adds easily configurable PWM Light controls to Octoprint Control Tab
 authors:
-  - Sander Ronde
-license: MIT
+- RoboMagus
+license: AGPLv3
 
-date: 2021-05-18
+# TODO
+date: 2021-07-09
 
-homepage: https://github.com/SanderRonde/Octoprint-Draggable-Files
-source: https://github.com/SanderRonde/Octoprint-Draggable-Files
-archive: https://github.com/SanderRonde/Octoprint-Draggable-Files/archive/main.zip
+homepage: https://github.com/RoboMagus/OctoPrint-LightControls
+source: https://github.com/RoboMagus/OctoPrint-LightControls
+archive: https://github.com/RoboMagus/OctoPrint-LightControls/archive/main.zip
 
-#follow_dependency_links: false
 
 tags:
-  - file
-  - filemanager
-  - file_manager
-  - dragging
+- Raspberry PI
+- Lights
+- PWM
+- Slider
+
+screenshots:
+- url: /assets/img/plugins/LightControls/LightControls_ControlPanel.png
+  alt: LightControls on main Control Tab
+  caption: LightControls on main Control Tab
+- url: /assets/img/plugins/LightControls/LightControls_Settings.png
+  alt: LightControls Settings Panel
+  caption: LightControls Settings Panel
+
+# TODO
+# You only need the following if your plugin requires specific OctoPrint versions or
+# specific operating systems to function - you can safely remove the whole
+# "compatibility" block if this is not the case.
 
 compatibility:
+
   # List of compatible versions
   #
   # A single version number will be interpretated as a minimum version requirement,
@@ -34,7 +48,7 @@ compatibility:
   # OctoPrint versions being supported.
 
   octoprint:
-    - 1.2.0
+  - 1.6.0
 
   # List of compatible operating systems
   #
@@ -54,10 +68,7 @@ compatibility:
   # operating systems being supported.
 
   os:
-    - linux
-    - windows
-    - macos
-    - freebsd
+  - linux
 
   # Compatible Python version
   #
@@ -69,15 +80,6 @@ compatibility:
   # is EOL), leave at ">=2.7,<3" - be aware that your plugin will not be allowed to register on the
   # plugin repository if it only support Python 2.
 
-  python: ">=2.7,<4"
+  python: ">=3,<4"
+
 ---
-
-# Octoprint Draggable Files
-
-Plugin that allows for the dragging of files in the File Manager. Additionally, it adds the ability to resize the file manager.
-
-## Example:
-
-![Dragging files or folders](/assets/img/plugins/draggable_files/dragging.gif)
-
-![Resizing the file manager](/assets/img/plugins/draggable_files/resizing.gif)
